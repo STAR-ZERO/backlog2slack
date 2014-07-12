@@ -1,0 +1,15 @@
+interval: 10
+backlog:
+  space: 
+  api_key: 
+slack:
+  team: 
+  token: 
+  channel: 
+  username: 
+  icon_url: 
+  icon_emoji:
+user:
+  0000: 
+  0001: 
+  0002: 

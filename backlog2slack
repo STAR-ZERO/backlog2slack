@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './backlog2slack'
+
+Backlog2Slack::CLI.start(ARGV)
