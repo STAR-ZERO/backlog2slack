@@ -36,7 +36,7 @@ module Backlog2Slack
 
     class User
       def initialize(yaml)
-        @user = yaml['user']
+        @user = yaml['user'] || []
       end
 
       def [](backlog_id)
