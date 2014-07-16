@@ -25,7 +25,8 @@ module Backlog2Slack
         channel: "##{@config.slack.channel}",
         username: @config.slack.username,
         icon_url: @config.slack.icon_url,
-        icon_emoji: @config.slack.icon_emoji
+        icon_emoji: @config.slack.icon_emoji,
+        link_names: 1
       })
       client.notify(slack_message(project, issue))
     end
@@ -43,7 +44,7 @@ module Backlog2Slack
       if issue.assign_id
         slack_user = @config.user[issue.assign_id]
         if slack_user
-          user = "assign: <https://#{@config.slack.team}.slack.com/team/#{slack_user}|@#{slack_user}>"
+          user = "assign: @#{slack_user}"
         end
       end
 
